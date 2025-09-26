@@ -36,6 +36,8 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             About Me
@@ -45,7 +47,10 @@ export default function About() {
           </p>
         </div>
 
+        {/* Journey + Image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          
+          {/* Text */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -61,14 +66,17 @@ export default function About() {
             </p>
             <div className="flex items-center space-x-4">
               <CheckCircle className="w-6 h-6 text-green-600" />
-              <span className="text-gray-700 font-medium">Committed to continuous learning and improvement</span>
+              <span className="text-gray-700 font-medium">
+                Committed to continuous learning and improvement
+              </span>
             </div>
           </div>
 
+          {/* Image */}
           <div className="flex justify-center">
             <div className="relative">
               <img
-                src="/WhatsApp Image 2025-09-25 at 22.48.28_e4a5b1e4.jpg"
+                src="/profile.jpg"  // ← الصورة موجودة في public بالاسم ده تمام
                 alt="Mohamed Elsayed at work"
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl object-center"
                 style={{ objectPosition: 'center 25%' }}
@@ -77,9 +85,11 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Technical Skills</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Technical Skills
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {skills.map((skill, index) => (
               <div
@@ -92,21 +102,29 @@ export default function About() {
           </div>
         </div>
 
-        {/* Values Section */}
+        {/* Core Values */}
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Core Values</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Core Values
+          </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="text-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow"
+              >
                 <div className="flex justify-center mb-4">
                   {value.icon}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  {value.title}
+                </h4>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
