@@ -76,7 +76,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="relative">
               <img
-                src="/profile.jpg"  // ← الصورة موجودة في public بالاسم ده تمام
+                src={process.env.PUBLIC_URL + '/profile.jpg'}  // ← الطريقة المضمونة
                 alt="Mohamed Elsayed at work"
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl object-center"
                 style={{ objectPosition: 'center 25%' }}
